@@ -17,9 +17,12 @@ from стенд import ГОТОВОЕ, РАБОЧИЙ, платформа, со�
 
 ИБ = os.path.join(РАБОЧИЙ, "epf", "ib")
 
+# Корневой XML выгрузки называется по имени объекта метаданных, а не по имени файла .epf.
+ИМЯ_ОБЪЕКТА = "ПросмотрСправкиHBK"
+
 
 def main():
-    epf = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ГОТОВОЕ, "ПросмотрСправкиHBK.epf")
+    epf = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ГОТОВОЕ, "hbk-viewer.epf")
     каталог = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ГОТОВОЕ, "выгрузка")
 
     if not os.path.exists(epf):
@@ -33,7 +36,7 @@ def main():
 
     # Платформе передаётся путь корневого XML, а не каталог: рядом с ним она создаёт
     # одноимённый подкаталог с формами и модулями.
-    корневой = os.path.join(каталог, os.path.splitext(os.path.basename(epf))[0] + ".xml")
+    корневой = os.path.join(каталог, ИМЯ_ОБЪЕКТА + ".xml")
 
     лог = os.path.join(РАБОЧИЙ, "выгрузка.log")
     код = subprocess.call([платформа(), "DESIGNER", "/F" + ИБ,

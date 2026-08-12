@@ -23,7 +23,7 @@ IB = os.path.join(WORK, "ib")
 
 
 def main():
-    epf = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ГОТОВОЕ, "ПросмотрСправкиHBK.epf")
+    epf = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ГОТОВОЕ, "hbk-viewer.epf")
     if not os.path.exists(epf):
         print("нет файла:", epf)
         return 1

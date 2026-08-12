@@ -17,7 +17,11 @@ from стенд import ГОТОВОЕ, РАБОЧИЙ, платформа, со�
 WORK = os.path.join(РАБОЧИЙ, "epf")
 IB = os.path.join(WORK, "ib")
 SRC = os.path.join(WORK, "src")
+
+# Имя объекта метаданных - русское, как и весь код. Имя файла - латиницей: GitHub
+# вырезает кириллицу из имён файлов, приложенных к релизу.
 NAME = "ПросмотрСправкиHBK"
+ФАЙЛ = "hbk-viewer.epf"
 
 ROOT_XML = '''<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" %(ns)s version="2.20">
@@ -76,7 +80,7 @@ FORM_MD_XML = '''<?xml version="1.0" encoding="UTF-8"?>
 
 
 def main():
-    выход = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ГОТОВОЕ, NAME + ".epf")
+    выход = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ГОТОВОЕ, ФАЙЛ)
     os.makedirs(os.path.dirname(выход), exist_ok=True)
 
     создать_иб(IB)
