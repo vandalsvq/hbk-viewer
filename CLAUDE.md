@@ -104,8 +104,8 @@ python tools\run.py tools\test_engine.bsl src\engine_data.bsl src\engine_client.
 
 ## Ветки, коммиты, версия
 
-- Основная ветка: `master`
-- Рабочие ветки: `feature/<N>` от `master`, где `N` — номер issue
+- Основная ветка: `main`
+- Рабочие ветки: `feature/<N>` от `main`, где `N` — номер issue
 - Формат коммита: `https://github.com/vandalsvq/hbk-viewer/issues/<N> <описание на русском>`
 - Не добавлять `Co-Authored-By`
 - `git push` — только по явной просьбе владельца
