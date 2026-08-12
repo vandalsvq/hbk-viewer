@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Справка 1С</v8:content>
+		</v8:item>
+	</Title>
+	<Width>110</Width>
+	<Height>25</Height>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ОткрытьФайлСправки" id="141">
+				<Type>UsualButton</Type>
+				<CommandName>Form.Command.ОткрытьФайлСправки</CommandName>
+				<ExtendedTooltip name="ОткрытьФайлСправкиРасширеннаяПодсказка" id="144"/>
+			</Button>
+			<ButtonGroup name="ФормаГруппаНавигация" id="195">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа навигация</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа навигация</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Representation>Compact</Representation>
+				<ExtendedTooltip name="ФормаГруппаНавигацияРасширеннаяПодсказка" id="196"/>
+				<ChildItems>
+					<Button name="Назад" id="142">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Назад</CommandName>
+						<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="145"/>
+					</Button>
+					<Button name="Вперёд" id="143">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Вперёд</CommandName>
+						<PictureLocation>Right</PictureLocation>
+						<ExtendedTooltip name="ВперёдРасширеннаяПодсказка" id="146"/>
+					</Button>
+					<Button name="Вышестоящий" id="197">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Вышестоящий</CommandName>
+						<ExtendedTooltip name="ВышестоящийРасширеннаяПодсказка" id="198"/>
+					</Button>
+					<Button name="Нижестоящий" id="199">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Нижестоящий</CommandName>
+						<ExtendedTooltip name="НижестоящийРасширеннаяПодсказка" id="200"/>
+					</Button>
+					<Button name="НайтиВДереве" id="201">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.НайтиВДереве</CommandName>
+						<ExtendedTooltip name="НайтиВДеревеРасширеннаяПодсказка" id="202"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаРабочая" id="100">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРабочаяРасширеннаяПодсказка" id="147"/>
+			<ChildItems>
+				<Pages name="Панели" id="101">
+					<Width>25</Width>
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
+					<ExtendedTooltip name="ПанелиРасширеннаяПодсказка" id="148"/>
+					<ChildItems>
+						<Page name="СтраницаСодержание" id="102">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Содержание</v8:content>
+								</v8:item>
+							</Title>
+							<Width>30</Width>
+							<ExtendedTooltip name="СтраницаСодержаниеРасширеннаяПодсказка" id="149"/>
+							<ChildItems>
+								<Table name="Дерево" id="103">
+									<Representation>Tree</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Width>25</Width>
+									<Header>false</Header>
+									<DataPath>Дерево</DataPath>
+									<ContextMenu name="ДеревоКонтекстноеМеню" id="150"/>
+									<AutoCommandBar name="ДеревоКоманднаяПанель" id="151"/>
+									<ExtendedTooltip name="ДеревоРасширеннаяПодсказка" id="152"/>
+									<SearchStringAddition name="ДеревоСтрокаПоиска" id="153">
+										<AdditionSource>
+											<Item>Дерево</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоСтрокаПоискаКонтекстноеМеню" id="154"/>
+										<ExtendedTooltip name="ДеревоСтрокаПоискаРасширеннаяПодсказка" id="155"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДеревоСостояниеПросмотра" id="156">
+										<AdditionSource>
+											<Item>Дерево</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоСостояниеПросмотраКонтекстноеМеню" id="157"/>
+										<ExtendedTooltip name="ДеревоСостояниеПросмотраРасширеннаяПодсказка" id="158"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДеревоУправлениеПоиском" id="159">
+										<AdditionSource>
+											<Item>Дерево</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоУправлениеПоискомКонтекстноеМеню" id="160"/>
+										<ExtendedTooltip name="ДеревоУправлениеПоискомРасширеннаяПодсказка" id="161"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">ДеревоПриАктивизацииСтроки</Event>
+										<Event name="BeforeExpand">ДеревоПередРазворачиванием</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="ДеревоГруппаПредставление" id="193">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дерево группа представление</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дерево группа представление</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="ДеревоГруппаПредставлениеРасширеннаяПодсказка" id="194"/>
+											<ChildItems>
+												<PictureField name="ДеревоКартинка" id="104">
+													<DataPath>Дерево.Картинка</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ShowInHeader>false</ShowInHeader>
+													<ShowInFooter>false</ShowInFooter>
+													<Width>2</Width>
+													<ContextMenu name="ДеревоКартинкаКонтекстноеМеню" id="162"/>
+													<ExtendedTooltip name="ДеревоКартинкаРасширеннаяПодсказка" id="163"/>
+												</PictureField>
+												<InputField name="ДеревоПредставление" id="105">
+													<DataPath>Дерево.Представление</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ДеревоПредставлениеКонтекстноеМеню" id="164"/>
+													<ExtendedTooltip name="ДеревоПредставлениеРасширеннаяПодсказка" id="165"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаИндекс" id="110">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Индекс</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СтраницаИндексРасширеннаяПодсказка" id="166"/>
+							<ChildItems>
+								<InputField name="Поиск" id="111">
+									<DataPath>Поиск</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="ПоискКонтекстноеМеню" id="167"/>
+									<ExtendedTooltip name="ПоискРасширеннаяПодсказка" id="168"/>
+									<Events>
+										<Event name="OnChange">ПоискПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Table name="Совпадения" id="112">
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<Width>25</Width>
+									<DataPath>Совпадения</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СовпаденияКонтекстноеМеню" id="169"/>
+									<AutoCommandBar name="СовпаденияКоманднаяПанель" id="170"/>
+									<ExtendedTooltip name="СовпаденияРасширеннаяПодсказка" id="171"/>
+									<SearchStringAddition name="СовпаденияСтрокаПоиска" id="172">
+										<AdditionSource>
+											<Item>Совпадения</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СовпаденияСтрокаПоискаКонтекстноеМеню" id="173"/>
+										<ExtendedTooltip name="СовпаденияСтрокаПоискаРасширеннаяПодсказка" id="174"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СовпаденияСостояниеПросмотра" id="175">
+										<AdditionSource>
+											<Item>Совпадения</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СовпаденияСостояниеПросмотраКонтекстноеМеню" id="176"/>
+										<ExtendedTooltip name="СовпаденияСостояниеПросмотраРасширеннаяПодсказка" id="177"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СовпаденияУправлениеПоиском" id="178">
+										<AdditionSource>
+											<Item>Совпадения</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СовпаденияУправлениеПоискомКонтекстноеМеню" id="179"/>
+										<ExtendedTooltip name="СовпаденияУправлениеПоискомРасширеннаяПодсказка" id="180"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">СовпаденияПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<PictureField name="СовпаденияКартинка" id="113">
+											<DataPath>Совпадения.Картинка</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>2</Width>
+											<ContextMenu name="СовпаденияКартинкаКонтекстноеМеню" id="181"/>
+											<ExtendedTooltip name="СовпаденияКартинкаРасширеннаяПодсказка" id="182"/>
+										</PictureField>
+										<InputField name="СовпаденияПредставление" id="114">
+											<DataPath>Совпадения.Представление</DataPath>
+											<ContextMenu name="СовпаденияПредставлениеКонтекстноеМеню" id="183"/>
+											<ExtendedTooltip name="СовпаденияПредставлениеРасширеннаяПодсказка" id="184"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<HTMLDocumentField name="ПолеСтатьи" id="120">
+					<DataPath>Статья</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ПолеСтатьиКонтекстноеМеню" id="189"/>
+					<ExtendedTooltip name="ПолеСтатьиРасширеннаяПодсказка" id="190"/>
+					<Events>
+						<Event name="OnClick">ПолеСтатьиПриНажатии</Event>
+					</Events>
+				</HTMLDocumentField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="ПолеСостояния" id="130">
+			<DataPath>Состояние</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ПолеСостоянияКонтекстноеМеню" id="191"/>
+			<ExtendedTooltip name="ПолеСостоянияРасширеннаяПодсказка" id="192"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ПросмотрСправкиHBK</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Статья" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Поиск" id="3">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Состояние" id="4">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьПакета" id="5">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ПутьПакета</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Дерево" id="6">
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Представление" id="7">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Идентификатор" id="8">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Путь" id="9">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="10">
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Заглушка" id="11">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Совпадения" id="12">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Представление" id="13">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Путь" id="16">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="17">
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьФайлСправки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьФайлСправки</Action>
+		</Command>
+		<Command name="Назад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Назад</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Вперёд" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вперёд</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Вперёд</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Вышестоящий" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вышестоящий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к разделу уровнем выше</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Вышестоящий</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="Нижестоящий" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нижестоящий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к первой вложенной статье</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Нижестоящий</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="НайтиВДереве" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти в содержании</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать открытую статью в дереве содержания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Find</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НайтиВДереве</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>
